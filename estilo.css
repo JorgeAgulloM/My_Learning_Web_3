@@ -1,0 +1,241 @@
+/*#######################################----ADAPTACIÓN MOBILE FIRST----########################################*/
+
+/*-----------Ajustes para todo el documento--------*/
+html {scroll-behavior: smooth}
+* {box-sizing: border-box}
+
+/******************************************************************/
+ 
+/*------------NAVBAR-------------------------------*/
+/*tamaño del navbar*/
+.navbar {height: 37px}
+/*---Se modifica el tamaño del texto del toggler---*/
+.navbar-brand{
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+/*-----Se modifica la posición de aparición--------*/
+.nav-content {
+    margin-left: 0;
+    margin-top: 28px
+}
+/*------posición del toogler-button----------------*/
+.navbar-toggler {
+    position: fixed;
+    top: 0;
+    left: -5px;
+    border: 0
+}
+/*------color del nav-------------------------------*/
+.bg-dark {background-color: rgba(0, 0, 0, 0.85) !important}
+/*-------FIN DEL NAVBAR------------------------------*/
+ 
+/******************************************************************/
+
+/*-------AJUSTES GENERALES---------------------------*/
+/*-------Header de la clase jumbotron----------------*/
+.jumbotron {
+    margin: 0;
+    width: 100%;
+    height: 120px;
+    background: url('img/superior.jpg') no-repeat;
+    background-size: cover
+}
+/*-------parametros iniciales de la clase-------------*/
+.container {
+    background-color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 0;
+    margin-bottom: 0px
+}
+/*--------Ajuste para todas las imagenes---------------*/
+.images {margin-top: 30px !important}
+/*--------se ajustan todas las imagenes----------------*/
+img {
+    width: 100%;
+    object-fit: cover
+}
+/*---Se les da un sombreado a las imagenes centrales al
+pasar sobre ellas para resaltar que son interactivas----*/
+section img:hover {box-shadow: 0 2px 4px rgba(0, 0, 0, 0.85)}
+/*----FIN DE AJUSTES GENERALES--------------------------*/
+
+/******************************************************************/
+
+/*-------------ICONOS REDES SOCIALES---------------------*/
+/*------Se ajusta el contenedor de los iconos al 
+centro de la pantalla------------------------------------*/
+.social {
+    background-color: white;
+    width: 60px;
+    margin: 20px auto
+}
+/*Se ajusta el contenedor para que se alineen al centro 
+junto con la clase row asignada en el contenedor principal*/
+.social div {margin: auto}
+/*------Se ajusta un margen y el tamaño-------------------*/
+i {
+    color: black;
+    margin: 10px auto;
+    font-size: 3rem
+}
+/*------Se da un color a los iconos al pasar por ellos----*/
+i:hover {color: rgb(1, 13, 124)}
+/*-------------FIN DE ICONOS REDES SOCIALES---------------*/
+
+/******************************************************************/
+
+/*----------FORMULARIO------------------------------------*/
+/*-------Ajuste de la clase-------------------------------*/
+.contact {
+    background-color: grey;
+    padding: 60px;
+    z-index: 2
+}
+/*-------Ajuste de las etiquetas-------------------------*/
+.form-group label {
+    font-size: 1.2rem;
+    text-align: left !important;
+    font-weight: bold;
+    color: black
+}
+/*-------Ajuste del botón de contacto--------------------*/
+.contact button {margin-top: 5px}
+/*-------Ajuste de la clsae visual del botón--------------*/
+.btn-dark {
+    background-color: black;
+    border: 2px white solid
+}
+/*----------FIN DEL FORMULARIO----------------------------*/
+
+/******************************************************************/
+
+/*-------BARRA FINAL DE CONTACTO Y FOOTER-----------------*/
+/*------Footer--------------------------------------------*/
+footer {
+    width: 100%;
+    z-index: -2
+}
+/*------Ajuste de la imagen del footer--------------------*/
+footer img{
+    height: 120px;
+    object-fit: cover
+}
+/*------Clase para la barra inferior----------------------*/
+.foot{
+    object-position: bottom;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0;
+    padding: 0px;
+    background: black
+}
+/*-----Se ajustan valores de los parrafos con etiqueta----*/
+#fax, #phonefax {display: none}
+/*--------FIN DE LA BARRA FINAL---------------------------*/
+
+/******************************************************************/
+
+/*#########ADAPTACIÓN Small###############################*/
+@media screen and (min-width: 577px){
+    /*-----Se ajusta y modifica el formulario-------------*/
+    .contact {
+        width: 540px;
+        margin: auto;
+        background-color: grey;
+        padding: 60px
+    }   
+}
+
+/******************************************************************/
+
+/*##########ADAPTACIÓN Medium#############################*/
+@media screen and (min-width: 768px) {
+    /*----Se modifica el tamaño del texto del toggler-----*/
+    .navbar-brand{
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, 0) !important
+    }
+    /*----Se modifica el margen---------------------------*/
+    .nav-content {margin: 0 auto}
+    /*-------Header jumbotron-----------------------------*/
+    .jumbotron {height: 160px}
+    /*-------Se ajusta el alto de la clase----------------*/
+    .container {
+        margin-top: -60px;
+        margin-bottom: -60px
+    }
+    /*-------Se ajusta el contenedor de los iconos al 
+    centro de la pantalla---------------------------------*/
+    .social {
+        width: 720px;
+        padding: 54px;
+        margin: 0 auto;
+        margin-top: -60px
+    }
+    /*----------ICONOS-------------------------------------*/
+    /*-------Se ajusta el margen y el tamaño---------------*/
+    i {
+        object-position: center;
+        margin: 10px auto;
+        font-size: 4rem
+    }
+    /*-----Se ajusta el formulario--------------------------*/
+    .contact {
+        width: 720px;
+        margin-bottom: -60px
+    }
+    /*-------AJUSTE DE LA BARRA FINAL----------------------*/
+    /*------Ajuste de posciión del footer------------------*/
+    footer {
+        position: relative;
+        bottom: 0}
+    /*------Se ajusta la clase-----------------------------*/
+    .foot{
+        font-size: 0.9rem;
+        color: white;
+        margin: 0
+    }
+    /*---Se modifica la visual de los parrafos con etiqueta*/
+    #phone {display: none}
+    #fax {display: block}
+}
+
+/******************************************************************/
+
+/*###############ADAPTACIÓN Large##########################*/
+@media screen and (min-width: 992px) {
+    /*-----Se ajusta el espacio de redes sociales----------*/
+    .social {
+        width: 960px;
+        padding: 54.5px
+    }
+    /*-----Se ajusta el formulario-------------------------*/
+    .contact {width: 960px}
+
+    /*--Clase para controlar el texto de la presentación---*/
+    .txt{
+        width: 800px !important;
+        margin: 0 auto
+    }
+    /*------Ajuste de posciión del footer------------------*/
+    footer {
+        position: absolute ;
+        bottom: 0
+    }
+    /*---Se modifica la visual de los parrafos con etiqueta*/
+    #fax {display: none}
+    #phonefax{display: block}
+}
+
+/******************************************************************/
+
+/*###############ADAPTACIÓN XLarge##########################*/
+@media screen and (min-width: 1200px) {
+    /*-----Se ajusta el espacio de redes sociales y el formulario*/
+    .social, .contact {width: 1140px}  
+}
+ 
